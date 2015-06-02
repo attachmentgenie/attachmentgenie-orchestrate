@@ -1,0 +1,14 @@
+{
+  "name": "attachmentgenie-orchestrate",
+  "version": "0.1.0",
+  "author": "attachmentgenie",
+  "summary": "Placeholder module for orchestrate roles, stacks and profiles",
+  "license": "Apache-2.0",
+  "source": "https://github.com/attachmentgenie/attachmentgenie-orchestrate.git",
+  "project_page": "https://github.com/attachmentgenie/attachmentgenie-orchestrate",
+  "issues_url": "https://github.com/attachmentgenie/attachmentgenie-orchestrate/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+

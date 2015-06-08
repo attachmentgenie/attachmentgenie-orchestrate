@@ -1,7 +1,13 @@
-class orchestrate::profile_rundeck () {
+class orchestrate::profile_rundeck (
+  $puppetdb_host = puppet,
+  $puppetdb_port = 8080,
+) {
 
   class { 'rundeck': }
-  class { 'puppetdb_rundeck': }
+  class { 'puppetdb_rundeck':
+    puppetdb_host => $puppetdb_host,
+    puppetdb_port => $puppetdb_post,
+  }
 
   rundeck::config::project { 'Platform project':
     file_copier_provider   => 'jsch-scp',

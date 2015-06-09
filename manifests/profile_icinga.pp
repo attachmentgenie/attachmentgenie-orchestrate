@@ -26,8 +26,7 @@ class orchestrate::profile_icinga (
     class { '::apache': }
     package { 'httpd-tools': }
   }
-  class {
-    'icinga':
+  class { 'icinga':
       icinga_vhost        => '/etc/httpd/conf.d/15-icinga.conf',
       server              => $is_server,
       hostgroups          => 'default',

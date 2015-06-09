@@ -1,7 +1,8 @@
 class orchestrate::role_monitor {
-  require ::stack_bootstrap
+  require ::orchestrate::stack_bootstrap
 
-  class { 'orchestrate::profile_icinga': }
-
-  motd::register{ 'Role : monitor': }
+  if !defined(Class['::orchestrate::profile_icinga']) {
+    class { '::orchestrate::profile_icinga': }
+  }
+  motd::register{ 'Role    : monitor': }
 }

@@ -4,5 +4,5 @@ class orchestrate::stack_testing {
   class { '::orchestrate::profile_package': }
   class { '::orchestrate::profile_php': }
 
-  motd::register{ 'Stack : testing': }
+  motd::register{ 'Stack   : testing': }
 }

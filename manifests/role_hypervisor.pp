@@ -3,5 +3,5 @@ class orchestrate::hypervisor {
 
   class { 'orchestrate::stack_openstack': }
 
-  motd::register{ 'Role : hypervisor': }
+  motd::register{ 'Role  : hypervisor': }
 }

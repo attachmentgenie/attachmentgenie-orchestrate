@@ -1,7 +1,7 @@
 class orchestrate::stack_gitlab (
   $external_url         = "http://${::fqdn}",
-  $gitlab_branch        = '7.8.2',
-  $gitlab_download_link = 'https://downloads-packages.s3.amazonaws.com/centos-6.6/gitlab-7.8.2_omnibus.1-1.el6.x86_64.rpm',
+  $gitlab_branch        = '7.11.4',
+  $gitlab_download_link = 'https://packages.gitlab.com/gitlab/gitlab-ce/packages/el/6/gitlab-ce-7.11.4~omnibus-1.x86_64.rpm',
 ) {
   class { gitlab :
     external_url           => $external_url,
@@ -10,5 +10,5 @@ class orchestrate::stack_gitlab (
     puppet_manage_packages => false,
   }
 
-  motd::register{ 'Stack : gitlab': }
+  motd::register{ 'Stack   : gitlab': }
 }

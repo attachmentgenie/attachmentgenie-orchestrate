@@ -1,0 +1,8 @@
+fixtures:
+  repositories:
+    stdlib: "git://github.com/puppetlabs/puppetlabs-stdlib.git"
+    apache: "git://github.com/puppetlabs/puppetlabs-apache.git"
+    haproxy: "git://github.com/puppetlabs/puppetlabs-haproxy.git"
+    motd: "git://github.com/attachmentgenie/attachmentgenie-motd.git"
+  symlinks:
+    "orchestrate": "#{source_dir}"

@@ -4,7 +4,7 @@ class orchestrate::stack_website {
   @@haproxy::balancermember { $::hostname:
     listening_service => 'platform-http',
     server_names      => $::fqdn,
-    ipaddresses       => $ipaddress_eth1,
+    ipaddresses       => $::ipaddress_eth1,
     ports             => '80',
   }
 

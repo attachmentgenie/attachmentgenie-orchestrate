@@ -1,3 +1,4 @@
+#
 class orchestrate::profile_php {
 
   require ::orchestrate::profile_ruby
@@ -17,14 +18,19 @@ class orchestrate::profile_php {
         manage_repos => false,
         fpm          => false,
         composer     => false,
-        extensions   => {'intl'     => {},
-                         'mbstring' => {},
-                         'mysql'    => {},
-                         'mcrypt'   => {},
-                         'xdebug'   => {'package_prefix' => 'php-pecl-'},
-                         'xml'      => {},
+        extensions   => {
+          'intl'     => {},
+          'mbstring' => {},
+          'mysql'    => {},
+          'mcrypt'   => {},
+          'xdebug'   => {
+            'package_prefix' => 'php-pecl-'
+          },
+          'xml'      => {},
         },
-        settings     => {'Date/date.timezone' => 'Europe/Amsterdam'},
+        settings     => {
+          'Date/date.timezone' => 'Europe/Amsterdam'
+        },
       }
     }
     default: {

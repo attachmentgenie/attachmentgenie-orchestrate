@@ -4,6 +4,8 @@ fixtures:
     apache: "git://github.com/puppetlabs/puppetlabs-apache.git"
     haproxy: "git://github.com/puppetlabs/puppetlabs-haproxy.git"
     motd: "git://github.com/attachmentgenie/attachmentgenie-motd.git"
-    concat: "git://github.com/puppetlabs/puppetlabs-concat.git"
+    concat:
+      repo: "git://github.com/puppetlabs/puppetlabs-concat.git"
+      ref: "1.2.3"
   symlinks:
     "orchestrate": "#{source_dir}"

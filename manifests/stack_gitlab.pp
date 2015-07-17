@@ -1,13 +1,13 @@
 class orchestrate::stack_gitlab (
-  $external_url         = "http://${::fqdn}",
-  $gitlab_branch        = '7.11.4',
-  $gitlab_download_link = 'https://packages.gitlab.com/gitlab/gitlab-ce/packages/el/6/gitlab-ce-7.11.4~omnibus-1.x86_64.rpm',
+  $host = $::fqdn,
+  $port = '8080',
 ) {
   class { gitlab :
-    external_url           => $external_url,
-    gitlab_branch          => $gitlab_branch,
-    gitlab_download_link   => $gitlab_download_link,
-    puppet_manage_packages => false,
+    external_url => "http://${host}",
+    nginx => {
+      'enable'      => true,
+      'listen_port' => 8081,
+    }
   }
 
   motd::register{ 'Stack   : gitlab': }

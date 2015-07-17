@@ -19,8 +19,6 @@ class orchestrate::profile_rundeck (
                     url                 => 'http://localhost:4567/api/yaml',
                     include_server_node => true,
                     resource_format     => 'resourceyaml',
-                    user                => $::rundeck::user,
-                    group               => $::rundeck::group,
                   }
     },
     framework_config       => {

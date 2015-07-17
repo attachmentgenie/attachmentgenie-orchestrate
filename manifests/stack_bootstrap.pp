@@ -10,12 +10,9 @@ class orchestrate::stack_bootstrap (
   class { '::orchestrate::profile_network': }
   class { '::orchestrate::profile_repositories': }
   class { '::orchestrate::profile_ssh': }
-  class { '::orchestrate::profile_sudo': }
+  #class { '::orchestrate::profile_sudo': }
   class { '::orchestrate::profile_time': }
   class { '::puppetmaster::profile_puppet': }
-
-  #Class['::motd'] ->
-  #Class['::motd::register']
 
   motd::register{ 'Stack   : bootstrap': }
 }

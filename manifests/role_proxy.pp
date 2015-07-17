@@ -1,7 +1,7 @@
 class orchestrate::role_proxy {
-  require ::stack_bootstrap
+  require ::orchestrate::stack_bootstrap
 
-  class { 'orchestrate::profile_haproxy': }
+  class { '::orchestrate::stack_proxy': }
 
-  motd::register{ 'Role  : proxy': }
+  motd::register{ 'Role    : proxy': }
 }

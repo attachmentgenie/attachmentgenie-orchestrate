@@ -1,7 +1,7 @@
 class orchestrate::role_hypervisor {
-  require ::stack_bootstrap
+  require ::orchestrate::stack_bootstrap
 
   class { 'orchestrate::stack_openstack': }
 
-  motd::register{ 'Role  : hypervisor': }
+  motd::register{ 'Role    : hypervisor': }
 }

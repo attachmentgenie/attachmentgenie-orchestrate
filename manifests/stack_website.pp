@@ -8,5 +8,5 @@ class orchestrate::stack_website {
     ports             => '80',
   }
 
-  motd::register{ 'Stack : website': }
+  motd::register{ 'Stack   : website': }
 }

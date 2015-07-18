@@ -39,7 +39,10 @@ class orchestrate::stack_pulp {
 
   class { '::puppetmaster::profile_foreman_proxy': }
   class { '::foreman_proxy::plugin::pulp':
-    pulpnode_enabled => true,
+    listen_on        => 'http',
+    version          => 'present',
+    group            => 'foreman-proxy',
+    pulp_url         => "http://${::fqdn}"
   }
   Class['::puppet'] ->
   Class['::foreman_proxy']

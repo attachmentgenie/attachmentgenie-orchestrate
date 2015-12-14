@@ -5,7 +5,9 @@ class orchestrate::profile_locale {
     'debian': {
       class { 'locales': }
     }
+    default: {}
   }
 
+  class { '::motd': }
   motd::register{ 'Profile : locale': }
 }

@@ -4,7 +4,7 @@ class orchestrate::stack_gitlab (
 ) {
   class { gitlab :
     external_url => "http://${host}",
-    nginx => {
+    nginx        => {
       'enable'      => true,
       'listen_port' => 8081,
     }

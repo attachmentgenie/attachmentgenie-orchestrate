@@ -1,5 +1,5 @@
 require 'spec_helper'
-describe 'orchestrate::stack_website' do
+describe 'orchestrate::profile_locale' do
 
   let :facts do
   {
@@ -9,6 +9,6 @@ describe 'orchestrate::stack_website' do
   }
   end
   context 'with defaults for all parameters' do
-    it { should contain_class('orchestrate::stack_website') }
+    it { should contain_class('orchestrate::profile_locale') }
   end
 end

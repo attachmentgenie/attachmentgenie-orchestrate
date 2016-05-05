@@ -5,6 +5,7 @@ describe 'orchestrate::profile_locale' do
   {
    :concat_basedir         => '/tmp',
    :osfamily               => 'debian',
+   :operatingsystem        => 'debian',
    :operatingsystemrelease => 'wheezy'
   }
   end

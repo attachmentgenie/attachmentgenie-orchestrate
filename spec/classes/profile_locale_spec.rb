@@ -3,7 +3,9 @@ describe 'orchestrate::profile_locale' do
 
   let :facts do
   {
+   :architecture           => 'amd64',
    :concat_basedir         => '/tmp',
+   :lsbdistcodename        => 'wheezy',
    :osfamily               => 'debian',
    :operatingsystem        => 'debian',
    :operatingsystemrelease => 'wheezy'
